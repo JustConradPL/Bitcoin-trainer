@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinSimulator", "BitcoinSimulator\BitcoinSimulator.csproj", "{A2A62B08-470A-45D2-B4AF-133920E06568}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BtcBal", "BtcBal\BtcBal.csproj", "{725BC729-6C01-47C9-8A26-106AD7BD20FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{81F3EDD3-63FD-455D-9D79-59600AD26050}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2A62B08-470A-45D2-B4AF-133920E06568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2A62B08-470A-45D2-B4AF-133920E06568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2A62B08-470A-45D2-B4AF-133920E06568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2A62B08-470A-45D2-B4AF-133920E06568}.Release|Any CPU.Build.0 = Release|Any CPU
+		{725BC729-6C01-47C9-8A26-106AD7BD20FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{725BC729-6C01-47C9-8A26-106AD7BD20FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{725BC729-6C01-47C9-8A26-106AD7BD20FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{725BC729-6C01-47C9-8A26-106AD7BD20FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81F3EDD3-63FD-455D-9D79-59600AD26050}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81F3EDD3-63FD-455D-9D79-59600AD26050}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81F3EDD3-63FD-455D-9D79-59600AD26050}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81F3EDD3-63FD-455D-9D79-59600AD26050}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B9982DA8-890B-427F-8E98-7DF2730AAFC3}
+	EndGlobalSection
+EndGlobal

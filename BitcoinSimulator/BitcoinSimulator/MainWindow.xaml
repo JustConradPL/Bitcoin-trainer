@@ -1,0 +1,252 @@
+﻿<Window x:Class="BitcoinSimulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BitcoinSimulator"
+        mc:Ignorable="d"
+        Title="CryptoMania" Height="450" Width="850"
+        WindowStyle="None" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown"
+        >
+
+    <Window.Resources>
+        <Color x:Key="mainBlack" R="57" G="62" B="65" A="255"/>
+        <Color x:Key="mainRed" R="233" G="79" B="55" A="255"/>
+        <Color x:Key="mainBlue" R="63" G="136" B="197" A="255"/>
+        <Color x:Key="mainGreenish" R="68" G="187" B="164" A="255"/>
+        <Color x:Key="mainWhite" R="246" G="247" B="235" A="255"/>
+
+        <FontFamily x:Key="FantastyLike">fonts/#Fantasy</FontFamily>
+
+        <Storyboard x:Key="UpdateBtn_ColorChangeOn">
+            <ColorAnimation From="{StaticResource mainWhite}" To="{StaticResource mainBlue}"
+                            Duration="0:0:0.2" Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+                            FillBehavior="HoldEnd"/>
+        </Storyboard>
+
+        <Storyboard x:Key="UpdateBtn_ColorChangeOff">
+            <ColorAnimation To="{StaticResource mainWhite}" From="{StaticResource mainBlue}"
+                            Duration="0:0:0.8" Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+                            FillBehavior="HoldEnd"/>
+        </Storyboard>
+
+        <Style x:Key="TurnOffBtn" TargetType="Image">
+
+        </Style>
+
+    </Window.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="{StaticResource mainBlack}"/>
+        </Grid.Background>
+
+
+        <Button Style="{StaticResource RoundButtonStyle}"
+                Width="200" Height="50" 
+                Margin="0,300,0,0"
+                Content="Update Price" FontSize="20" Click="Button_Click"
+                >
+            <Button.Background>
+                <SolidColorBrush Color="{StaticResource mainWhite}"/>
+            </Button.Background>
+
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.MouseEnter">
+                    <BeginStoryboard Storyboard="{StaticResource UpdateBtn_ColorChangeOn}"/>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Button.MouseLeave">
+                    <BeginStoryboard Storyboard="{StaticResource UpdateBtn_ColorChangeOff}"/>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+
+
+        <TextBlock Width="auto" Height="auto" x:Name="PriceTxt"
+                   Text="Update" FontSize="170" Foreground="White" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   FontFamily="{StaticResource Barlow}" FontWeight="Medium"/>
+
+        <Grid Width="400" HorizontalAlignment="Left" Margin="60,200,0,-100" 
+              Panel.ZIndex="-1">
+            <StackPanel>
+                <Border Background="#E94F37"
+                        CornerRadius="20" 
+                        Width="400" Height="40"
+                        HorizontalAlignment="Right">
+                    <Border.Triggers>
+                        <EventTrigger RoutedEvent="Border.Loaded">
+                            <BeginStoryboard>
+                                <Storyboard Storyboard.TargetProperty="(Border.Width)">
+                                    <DoubleAnimation To="200" Duration="0:0:20"
+                                                     RepeatBehavior="Forever" AutoReverse="True"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Border.Triggers>
+                </Border>
+                <Border Background="#3F88C5"
+                        CornerRadius="15" 
+                        Width="350" Height="30"
+                        HorizontalAlignment="Right"
+                        Margin="15,10,0,0">
+                    <Border.Triggers>
+                        <EventTrigger RoutedEvent="Border.Loaded">
+                            <BeginStoryboard>
+                                <Storyboard Storyboard.TargetProperty="(Border.Width)">
+                                    <DoubleAnimation To="150" Duration="0:0:8"
+                                                     RepeatBehavior="Forever" AutoReverse="True"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Border.Triggers>
+                </Border>
+                <Border Background="#F26DF9"
+                        CornerRadius="15"
+                        Width="100" Height="30"
+                        HorizontalAlignment="Right"
+                        Margin="0,15,0,0">
+                    <Border.RenderTransform>
+                        <TranslateTransform X="0"/>
+                    </Border.RenderTransform>
+                    <Border.Triggers>
+                        <EventTrigger RoutedEvent="Border.Loaded">
+                            <BeginStoryboard>
+                                <Storyboard Storyboard.TargetProperty="(Border.RenderTransform).(TranslateTransform.X)">
+                                    <DoubleAnimation From="0" To="-400" RepeatBehavior="Forever"
+                                                     Duration="0:0:3"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Border.Triggers>
+                </Border>
+            </StackPanel>
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="50"/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+        </Grid>
+
+        <Grid Width="400" HorizontalAlignment="Right" Margin="0,250,-400,0" 
+              Panel.ZIndex="-1">
+            <StackPanel>
+                <Border Background="#E94F37"
+                        CornerRadius="20" 
+                        Width="600" Height="40"
+                        HorizontalAlignment="Left"/>
+                <Border Background="#3F88C5"
+                        CornerRadius="15" 
+                        Width="400" Height="30"
+                        HorizontalAlignment="Right"
+                        Margin="15,10,0,0">
+                    <Border.Triggers>
+                        <EventTrigger RoutedEvent="Border.Loaded">
+                            <BeginStoryboard>
+                                <Storyboard Storyboard.TargetProperty="(Border.Width)">
+                                    <DoubleAnimation To="100" Duration="0:0:10"
+                                                     RepeatBehavior="Forever" AutoReverse="True"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Border.Triggers>
+                </Border>
+            </StackPanel>
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="-130"/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="270"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="MenuIconImg"
+                   Style="{StaticResource MenuIcon}" Width="30" Height="30" Panel.ZIndex="10"
+                   HorizontalAlignment="Left" VerticalAlignment="Top"
+                   Margin="10,10,0,0" MouseDown="StackPanel_MouseDown"
+                   RenderOptions.BitmapScalingMode="Fant"
+                   />
+            <Grid HorizontalAlignment="Left" 
+                  Width="0"
+                  Background="#5E6472"
+                  x:Name="MainMenuGrid">
+                <Border Background="#545966"/>
+
+                <Image Stretch="Uniform"
+                       Grid.Row="0"
+                       Source="/BitcoinSimulator;component/Assets/btcLogo.png"
+                       HorizontalAlignment="Right" Margin="0,0,20,0"
+                       RenderOptions.BitmapScalingMode="Fant"/>
+                <TextBlock Text="Bitcoin Simulator" TextWrapping="Wrap"
+                           Grid.Row="0" Width="110" FontSize="25" 
+                           Foreground="White" FontFamily="{StaticResource Barlow}" FontWeight="Light"
+                           HorizontalAlignment="Left" Margin="45,15,0,0"/>
+
+                <Border  Grid.Row="7" Style="{StaticResource MenuBorder}"
+                          MouseDown="Button_Click_1">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                        <Image HorizontalAlignment="Left"
+                           Style="{StaticResource PowetOffIcon}"
+                           RenderOptions.BitmapScalingMode="Fant"
+                           Margin="20,0,0,0"/>
+                        <TextBlock Text="Exit"
+                               FontSize="40"
+                               Width="auto"
+                               Foreground="White"
+                               FontFamily="{StaticResource Barlow}"
+                               FontWeight="UltraLight"
+                               Margin="30,0,0,0"
+                               />
+                    </StackPanel>
+                </Border>
+                <Border Grid.Row="2" Style="{StaticResource MenuBorder}">
+                    <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                        <Image Source="/BitcoinSimulator;component/Assets/paperMoney.png"
+                               RenderOptions.BitmapScalingMode="Fant"
+                               HorizontalAlignment="Left"/>
+                        <TextBlock Text="100 zł" 
+                                   Margin="10,0,0,0"
+                                   FontSize="35"
+                                   VerticalAlignment="Bottom"
+                                   Foreground="#F6F7EB"
+                                   FontWeight="Light"
+                                   FontFamily="{StaticResource Barlow}"/>
+
+                    </StackPanel>
+                </Border>
+                <Border Grid.Row="3" Style="{StaticResource MenuBorder}">
+                    <StackPanel Margin="20,0,0,0"
+                                Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                        <Image Source="/BitcoinSimulator;component/Assets/bitcoin.png"
+                               RenderOptions.BitmapScalingMode="Fant"
+                               Margin="0,0,0,0"
+                               HorizontalAlignment="Left"/>
+                        <TextBlock Text="0" 
+                               Margin="10,0,0,0"
+                               FontSize="35"
+                               VerticalAlignment="Bottom"
+                               Foreground="#F6F7EB"
+                               FontWeight="Light"
+                               FontFamily="{StaticResource Barlow}"/>
+                    </StackPanel>
+                </Border>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

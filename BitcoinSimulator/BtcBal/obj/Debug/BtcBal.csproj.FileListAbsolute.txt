@@ -1,0 +1,6 @@
+C:\Users\Konrad\source\repos\JustConradPL\BtcSim\BitcoinSimulator\BtcBal\bin\Debug\BtcBal.dll
+C:\Users\Konrad\source\repos\JustConradPL\BtcSim\BitcoinSimulator\BtcBal\bin\Debug\BtcBal.pdb
+C:\Users\Konrad\source\repos\JustConradPL\BtcSim\BitcoinSimulator\BtcBal\obj\Debug\BtcBal.csproj.CoreCompileInputs.cache
+C:\Users\Konrad\source\repos\JustConradPL\BtcSim\BitcoinSimulator\BtcBal\obj\Debug\BtcBal.dll
+C:\Users\Konrad\source\repos\JustConradPL\BtcSim\BitcoinSimulator\BtcBal\obj\Debug\BtcBal.pdb
+C:\Users\Konrad\source\repos\JustConradPL\BtcSim\BitcoinSimulator\BtcBal\obj\Debug\BtcBal.csproj.AssemblyReference.cache

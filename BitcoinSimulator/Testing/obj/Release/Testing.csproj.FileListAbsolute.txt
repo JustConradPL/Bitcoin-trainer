@@ -1,0 +1,10 @@
+C:\Users\Konrad\source\repos\JustConradPL\BtcSim\BitcoinSimulator\Testing\bin\Release\Testing.exe.config
+C:\Users\Konrad\source\repos\JustConradPL\BtcSim\BitcoinSimulator\Testing\bin\Release\Testing.exe
+C:\Users\Konrad\source\repos\JustConradPL\BtcSim\BitcoinSimulator\Testing\bin\Release\Testing.pdb
+C:\Users\Konrad\source\repos\JustConradPL\BtcSim\BitcoinSimulator\Testing\bin\Release\BtcBal.dll
+C:\Users\Konrad\source\repos\JustConradPL\BtcSim\BitcoinSimulator\Testing\bin\Release\BtcBal.pdb
+C:\Users\Konrad\source\repos\JustConradPL\BtcSim\BitcoinSimulator\Testing\obj\Release\Testing.csproj.AssemblyReference.cache
+C:\Users\Konrad\source\repos\JustConradPL\BtcSim\BitcoinSimulator\Testing\obj\Release\Testing.csproj.CoreCompileInputs.cache
+C:\Users\Konrad\source\repos\JustConradPL\BtcSim\BitcoinSimulator\Testing\obj\Release\Testing.csproj.CopyComplete
+C:\Users\Konrad\source\repos\JustConradPL\BtcSim\BitcoinSimulator\Testing\obj\Release\Testing.exe
+C:\Users\Konrad\source\repos\JustConradPL\BtcSim\BitcoinSimulator\Testing\obj\Release\Testing.pdb
